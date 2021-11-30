@@ -1,3 +1,4 @@
+import 'package:arstask/utils.dart';
 import 'package:flutter/material.dart';
 
 class HomeView extends StatelessWidget {
@@ -38,27 +39,29 @@ class HomeView extends StatelessWidget {
               const SizedBox(
                 width: 10,
               ),
-              Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
-                  Text(
-                    'Plan a trip to Ukrain',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      color: Color.fromRGBO(37, 43, 103, 1),
+              Expanded(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Plan a trip to Ukrain',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        color: customBlue,
+                      ),
                     ),
-                  ),
-                  SizedBox(
-                    height: 5,
-                  ),
-                  Text(
-                    'I wanna go to Ukrain to go study oil and gas so one day...just one day I will become the Energy Minister',
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                    style: TextStyle(color: Colors.grey, fontSize: 16),
-                  ),
-                ],
+                    SizedBox(
+                      height: 5,
+                    ),
+                    Text(
+                      'I wanna go to Ukrain to go study oil and gas so one day...just one day I will become the Energy Minister',
+                      maxLines: 3,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(color: Colors.grey, fontSize: 16),
+                    ),
+                  ],
+                ),
               ),
               SizedBox(
                 width: 25,
@@ -93,9 +96,27 @@ class HomeView extends StatelessWidget {
             color: Color.fromRGBO(37, 43, 103, 0.4),
             child: Padding(
               padding: const EdgeInsets.all(15),
-              child: Row(
-                children: [Icon(Icons.check_circle_rounded)],
-              ),
+              child: Row(children: [
+                Icon(Icons.check_circle_rounded, color: customBlue),
+                const SizedBox(
+                  width: 10,
+                ),
+                Row(
+                  children: [
+                    Text(
+                      'Completed',
+                      style: TextStyle(
+                          color: customBlue, fontWeight: FontWeight.w600),
+                    ),
+                    Icon(
+                      Icons.keyboard_arrow_down,
+                      color: customBlue,
+                    ),
+                  ],
+                ),
+                const Spacer(),
+                Text('24', style: TextStyle(color: customBlue)),
+              ]),
             ),
           ),
         ),
