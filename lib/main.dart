@@ -1,4 +1,4 @@
-import 'package:arstask/home_view.dart';
+import 'package:arstask/views/home_view.dart';
 import 'package:arstask/utils.dart';
 import 'package:flutter/material.dart';
 
